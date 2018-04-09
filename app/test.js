@@ -1,18 +1,60 @@
-var Web3 = require('web3');
+var schedule = require('node-schedule');
 
-var listern = require("./rpc/blockListerner");
-var address = require("./utility/address").testAddressThree;//a3a8
-var web3 = new Web3();
-web3.setProvider(new web3.providers.HttpProvider('http://35.227.177.81:8545'));
+var block = require("./rpc/block");
+var address = require("./utility/address");
+var wallet = require("./rpc/wallet");
+var txQuery = require('./txQuery');
 
-//web3.setProvider(new web3.providers.HttpProvider('https://mainnet.infura.io/DO4H5SP2DNP6n3Nv1Q9I'));
-//web3.setProvider(new web3.providers.HttpProvider('https://ropsten.infura.io/1BPk9syIaAtEQzRuW9uF'));
+var promise = require("./promise");
+var db = require("./db/mySql");
+var sync = require("./sync");
 
-if(web3.isConnected()) {  
-   console.log("start listerning.") ;
- } else {
-   console.log("rpc disconnected.") ;
- }
 
-listern.ethDeposit(address);
-//listern.block() ;
+
+var rpc = require("./rpc/config");
+
+
+var web3 = rpc.conTo('test');
+
+
+
+
+
+    //    var rule = new schedule.RecurrenceRule();
+    //        rule = '*/5 * * * * *' ;
+    // // timeInterval == 0.5 ? rule = '*/30 * * * * *' ://test
+    // // timeInterval == 1 ? rule = '*/1 * * * *' :
+    // // timeInterval == 10 ? rule = '*/10* * * *' :
+    // // timeInterval == 30 ? rule = '*/30 * * * * *' :
+    // // timeInterval == null ? rule = '*/5 * * * * *' ://default
+    // //                        rule = '*/5 * * * * *' 
+    // // console.log("begin scan") ;
+
+
+//sync.tx(address.a3a8)
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    
+
+
+
+
+
+
+
+
+
+
+
