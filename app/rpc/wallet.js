@@ -82,7 +82,7 @@ var sendEth =  (address , toAddress , amount ) => {
 
 
 
-module.exports = {sendEth, balanceOf ,weiToeth}
+module.exports = {sendEth, balanceOf }
 
 //todo 
   //estimaite gas
